@@ -9,7 +9,7 @@ environment {
   }
   
 tools{
-maven 'maven3.8.2'
+maven 'maven3.8.6'
 
 }
 
@@ -23,7 +23,7 @@ stages{
 
   stage('CheckOutCode'){
     steps{
-    git branch: 'master', credentialsId: '957b543e-6f77-4cef-9aec-82e9b0230975', url: 'https://github.com/MithunTechnologiesDevOps/maven-web-application.git'
+    git credentialsId: '403a4b6e-7224-420e-8c25-211f70132342', url: 'https://github.com/janath-kumar/maven-web-application.git'
 	
 	}
   }
