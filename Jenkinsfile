@@ -56,6 +56,8 @@ stages{
 
 }//Pipeline closing
 
+
+/*
 post{
 
  success{
