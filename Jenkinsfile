@@ -30,9 +30,8 @@ stages{
   sh  "mvn clean package"
   }
   }
-}
-}//Pipeline closing
-/*
+
+
  stage('ExecuteSonarQubeReport'){
   steps{
   sh  "mvn clean sonar:sonar"
@@ -55,6 +54,7 @@ stages{
   
 }//Stages Closing
 
+}//Pipeline closing
 
 post{
 
