@@ -3,14 +3,14 @@ pipeline{
 agent any
 
 tools{
-maven 'maven3.8.2'
+maven 'maven3.8.6'
 
 }
-
+/*
 triggers{
 pollSCM('* * * * *')
 }
-
+*/
 options{
 timestamps()
 buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5'))
@@ -20,7 +20,7 @@ stages{
 
   stage('CheckOutCode'){
     steps{
-    git branch: 'development', credentialsId: '957b543e-6f77-4cef-9aec-82e9b0230975', url: 'https://github.com/devopstrainingblr/maven-web-application-1.git'
+    git credentialsId: '1c3119cb-5433-48f5-914d-d3d01dadb3be', url: 'https://github.com/janath-kumar/maven-web-application.git'
 	
 	}
   }
@@ -50,7 +50,7 @@ stages{
   }
   }
   }
-  */
+  
 }//Stages Closing
 
 post{
@@ -70,6 +70,6 @@ post{
  }
  
 }
-
+*/
 
 }//Pipeline closing
